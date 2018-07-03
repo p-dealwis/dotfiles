@@ -95,7 +95,7 @@ bindsym Control+space exec --no-startup-id rofr.sh -r
 bindsym Mod1+F1 exec --no-startup-id rofr.sh -r
 
 # core
-bindsym $Mod+t exec exo-open --launch TerminalEmulator
+bindsym $Mod+t exec terminator
 bindsym $Mod+w exec exo-open --launch WebBrowser
 bindsym $Mod+f exec exo-open --launch FileManager
 
