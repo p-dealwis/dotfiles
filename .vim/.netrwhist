@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/pramodya/Documents/gits/app-server/code/ezyvet/tools/conversion/system/intravet/configs'
+let g:netrw_dirhist_2='/home/pramodya/Documents/gits/app-server/code/ezyvet'
+let g:netrw_dirhist_3='/home/pramodya/Documents/gits/app-server/code/ezyvet/tools'
+let g:netrw_dirhist_4='/home/pramodya/Documents/gits/app-server/code/ezyvet'
+let g:netrw_dirhist_5='/home/pramodya/Documents/gits/app-server/code/ezyvet/tools'
+let g:netrw_dirhist_6='/home/pramodya/Documents/gits/app-server/code/ezyvet/tools/conversion'
+let g:netrw_dirhist_7='/home/pramodya/Documents/gits/app-server/code/ezyvet/tools/conversion/system'
+let g:netrw_dirhist_8='/home/pramodya/Documents/gits/app-server/code/ezyvet'
