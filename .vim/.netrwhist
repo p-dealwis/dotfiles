@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/pramodya/.ArchLabs-homepage'
+let g:netrw_dirhist_2='/usr/include/datrie'
+let g:netrw_dirhist_3='/home/pramodya/.config/xfce4/xfconf'
+let g:netrw_dirhist_4='/etc/lightdm'
+let g:netrw_dirhist_5='/home/pramodya/.config/termite'
