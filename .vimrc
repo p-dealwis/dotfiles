@@ -1,7 +1,8 @@
 " Custom Settings
 set nocompatible
 filetype plugin on
-
+syntax on 
+set path=$PWD/**
 
 " A few sane defaults for use in ArchLabs
 
@@ -75,3 +76,5 @@ augroup file_load_change_and_position
     autocmd FocusGained,BufEnter * if mode() !=? 'c' | checktime | endif
     autocmd FileChangedShellPost * echo "Changes loaded from file"
 augroup END
+
+execute pathogen#infect()
