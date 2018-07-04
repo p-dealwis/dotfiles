@@ -263,7 +263,7 @@ for_window [class="(?i)(?:geany|firefox)"] focus
 # Assign Applications to specific workspace
 # get class with xprop
 # assign [class="(?i)(?:chrome)"] → $WS5
-# assign [class="(?i)(?:termite)"] → $WS2
+assign [class="(?i)(?:termite)"] → $WS2
 assign [class="(?i)(?:thunar)"] → $WS2
 
 # focus, floating, & sticky
