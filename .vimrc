@@ -1,8 +1,37 @@
+" Bundles
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'pangloss/vim-javascript'
+Plugin 'ajh17/VimCompletesMe.git'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+call vundle#end() 
+
 " Custom Settings
 set nocompatible
 filetype plugin on
 syntax on 
 set path=$PWD/**
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+" Movement
+
+"Between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " A few sane defaults for use in ArchLabs
 
@@ -76,5 +105,3 @@ augroup file_load_change_and_position
     autocmd FocusGained,BufEnter * if mode() !=? 'c' | checktime | endif
     autocmd FileChangedShellPost * echo "Changes loaded from file"
 augroup END
-
-execute pathogen#infect()
