@@ -30,31 +30,31 @@ modules-right  = pkg memory temperature coreuse network volume
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = DP-0
+monitor = eDP1
 
 modules-left   = jgmenu i3 menu
 modules-center = clock
-modules-right  = pkg memory temperature coreuse network volume
+modules-right  = pkg memory temperature coreuse network battery volume
 
 [bar/i3-bar2]
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = HDMI-0
+monitor = DP1
 
 modules-left   = jgmenu i3 menu
 modules-center = clock
-modules-right  = pkg memory temperature coreuse network volume
+modules-right  = pkg memory temperature coreuse network battery volume
 
 [bar/i3-bar3]
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = DVI-I-1
+monitor = DP2-2
 
 modules-left   = jgmenu i3 menu
 modules-center = clock
-modules-right  = pkg memory temperature coreuse network volume
+modules-right  = pkg memory temperature coreuse network battery volume
 
 ;=====================================================
 ;     Bspwm Bars

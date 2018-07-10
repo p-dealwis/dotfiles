@@ -30,7 +30,9 @@ alias vpn='/home/pramodya/bin/vpn.sh'
 alias suspend='systemctl suspend'
 alias zshrc='vim /home/pramodya/.zshrc'
 alias ezyvet='/home/pramodya/Documents/gits/app-server/code/ezyvet/'
-
+alias hosts='sudo vim /etc/hosts'
+alias connect='/var/code/dev-scripts/connect'
+alias seespots='connect --list --e=conv --r=all --o'
 neofetch
 
 # tabtab source for serverless package

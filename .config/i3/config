@@ -51,9 +51,9 @@ set $WS8 "8: 23"
 set $WS9 "9: 33"
 
 # monitors
-set $Mon1 DP-0
-set $Mon2 HDMI-0 
-set $Mon3 DVI-I-1
+set $Mon1 DP2-2
+set $Mon2 DP1 
+set $Mon3 eDP1
 
 #####################################################
 ###############     Autostart      ##################
