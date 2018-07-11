@@ -1,4 +1,4 @@
-" Bundles
+" Vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -12,6 +12,7 @@ Plugin 'ajh17/VimCompletesMe.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end() 
 
 " Custom Settings
@@ -24,6 +25,18 @@ set path=$PWD/**
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+" Solarised
+
+syntax enable
+" set background=dark
+" colorscheme solarized
+
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
 
 " Movement
 
