@@ -32,6 +32,7 @@ alias ezyvet='/home/pramodya/gits/app-server/code/ezyvet/'
 alias hosts='sudo vim /etc/hosts'
 alias connect='/var/code/dev-scripts/connect'
 alias seespots='/var/code/dev-scripts/connect --list --e=conv --r=all --o'
+
 neofetch
 
 # tabtab source for serverless package
