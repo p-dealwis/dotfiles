@@ -23,16 +23,15 @@ alias mirrors='sudo reflector --score 100 --fastest 25 --sort rate --save /etc/p
 
 # MINE
 alias vssh='ssh vagrant@localhost -p 2222'
-alias vup='cd /home/pramodya/Documents/gits/app-server && sudo vagrant up'
-alias vhalt='cd /home/pramodya/Documents/gits/app-server && sudo vagrant halt'
+alias vup='cd /home/pramodya/gits/app-server && vagrant up'
+alias vhalt='cd /home/pramodya/gits/app-server && vagrant halt'
 alias gits='/home/pramodya/Documents/gits'
-alias vpn='/home/pramodya/bin/vpn.sh'
 alias suspend='systemctl suspend'
 alias zshrc='vim /home/pramodya/.zshrc'
-alias ezyvet='/home/pramodya/Documents/gits/app-server/code/ezyvet/'
+alias ezyvet='/home/pramodya/gits/app-server/code/ezyvet/'
 alias hosts='sudo vim /etc/hosts'
 alias connect='/var/code/dev-scripts/connect'
-alias seespots='connect --list --e=conv --r=all --o'
+alias seespots='/var/code/dev-scripts/connect --list --e=conv --r=all --o'
 neofetch
 
 # tabtab source for serverless package
