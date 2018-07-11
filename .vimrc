@@ -1,4 +1,7 @@
 " Vundle
+" Install Vundle using the following command:
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
