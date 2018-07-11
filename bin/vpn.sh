@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-
-sudo openvpn --config /etc/openvpn/client/conversions.conf --daemon && sudo openvpn --config /etc/openvpn/client/pramodya.conf --daemon
+systemctl start openvpn-client@pramodya.service
+systemctl start openvpn-client@conversions.service
