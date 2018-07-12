@@ -17,6 +17,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-vdebug/vdebug'
+Plugin 'ludovicchabant/vim-gutentags'
 call vundle#end() 
 
 " Appearance
@@ -31,7 +32,8 @@ else
 endif
 
 " Files
-:set autoread
+set autoread
+set autowrite
 
 " Misc  Settings
 set nocompatible
