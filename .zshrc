@@ -91,8 +91,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Zshrc
 
@@ -101,6 +101,8 @@ source $ZSH/oh-my-zsh.sh
 [[ $- != *i* ]] && return
 
 export PATH=$HOME/bin:$PATH
+
+. ~/bin/z.sh
 
 setopt AUTO_CD BANG_HIST EXTENDED_HISTORY HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_ALL_DUPS HIST_FIND_NO_DUPS HIST_IGNORE_DUPS
@@ -119,15 +121,13 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias mirrors='sudo reflector --score 100 --fastest 25 --sort rate --save /etc/pacman.d/mirrorlist --verbose'
 
 # MINE
+alias ag='ag --path-to-ignore ~/.ignore'
 alias vpn='~/bin/vpn.sh'
 alias vpnstop='~/bin/vpnstop.sh'
 alias vssh='ssh vagrant@localhost -p 2222'
 alias vup='cd /home/pramodya/gits/app-server && vagrant up'
 alias vhalt='cd /home/pramodya/gits/app-server && vagrant halt'
-alias gits='/home/pramodya/Documents/gits'
 alias suspend='systemctl suspend'
-alias zshrc='vim /home/pramodya/.zshrc'
-alias ezyvet='/home/pramodya/gits/app-server/code/ezyvet/'
 alias seespots='/var/code/dev-scripts/connect --list --e=conv --r=all --o'
 alias t='tmux new-session -A -s $1'
 
