@@ -58,7 +58,8 @@
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+    git
+    Z
 )
 
 ZSH_THEME="agnoster"
@@ -118,6 +119,8 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias mirrors='sudo reflector --score 100 --fastest 25 --sort rate --save /etc/pacman.d/mirrorlist --verbose'
 
 # MINE
+alias vpn='~/bin/vpn.sh'
+alias vpnstop='~/bin/vpnstop.sh'
 alias vssh='ssh vagrant@localhost -p 2222'
 alias vup='cd /home/pramodya/gits/app-server && vagrant up'
 alias vhalt='cd /home/pramodya/gits/app-server && vagrant halt'

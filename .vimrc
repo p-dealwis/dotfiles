@@ -15,7 +15,7 @@ Plugin 'ajh17/VimCompletesMe.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
 Plugin 'vim-vdebug/vdebug'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'junegunn/fzf.vim'
@@ -37,7 +37,7 @@ set autoread
 set autowrite
 
 " -FZF
-map <C-F> :Files<CR>
+map <C-P> :Files<CR>
 
 " Misc  Settings
 set nocompatible
