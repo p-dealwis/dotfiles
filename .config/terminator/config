@@ -1,5 +1,5 @@
 [global_config]
-  inactive_color_offset = 0.6
+  inactive_color_offset = 0.85652173913
   title_transmit_bg_color = "#888a85"
 [keybindings]
   help = F12
