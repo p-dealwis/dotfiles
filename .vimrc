@@ -18,6 +18,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-vdebug/vdebug'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'junegunn/fzf.vim'
 call vundle#end() 
 
 " Appearance
@@ -34,6 +35,9 @@ endif
 " Files
 set autoread
 set autowrite
+
+" -FZF
+map <C-F> :Files<CR>
 
 " Misc  Settings
 set nocompatible
