@@ -27,7 +27,7 @@ Plugin 'StanAngeloff/php.vim'
 Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'rayburgemeestre/phpfolding.vim'
 
-
+Plugin 'vim-syntastic/syntastic'
 Plugin 'ajh17/VimCompletesMe.git'
 Plugin 'vim-vdebug/vdebug'
 Plugin 'scrooloose/nerdcommenter'
@@ -51,6 +51,18 @@ endif
 
 " Editting
 set ai
+" - For Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" - PHP Folding
+map <F7> <Esc>:DisablePHPFolds<Cr> 
 
 " Files
 set autoread
