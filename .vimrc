@@ -8,20 +8,37 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'pangloss/vim-javascript'
-Plugin 'ajh17/VimCompletesMe.git'
+" Efficiency
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'kien/ctrlp.vim'
-Plugin 'vim-vdebug/vdebug'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'junegunn/fzf.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-obsession'
+
+" Language Plugins
+"" Javascript
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
+"" PHP
+Plugin 'StanAngeloff/php.vim'
+Plugin '2072/PHP-Indenting-for-VIm'
+Plugin 'rayburgemeestre/phpfolding.vim'
+
+
+Plugin 'ajh17/VimCompletesMe.git'
+Plugin 'vim-vdebug/vdebug'
+Plugin 'scrooloose/nerdcommenter'
+
+" Themes
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end() 
 
 " Appearance
+set background=dark
 
 " - Cursor
 if exists('$TMUX')
@@ -32,12 +49,18 @@ else
   let &t_EI = "\e[2 q"
 endif
 
+" Editting
+set ai
+
 " Files
 set autoread
 set autowrite
 
 " -FZF
-map <C-P> :Files<CR>
+map <C-P>p :Files<CR>
+map <C-P>a :Ag<CR>
+map <C-P>d :Buffers<CR>
+map <C-P>f :Lines<CR>
 
 " Misc  Settings
 set nocompatible
@@ -52,6 +75,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+:set ignorecase
+:set smartcase
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -93,7 +119,7 @@ set clipboard^=unnamedplus
 set number
 
 " ask confirmation for certain things like when quitting before saving
-set confirm
+" set confirm
 
 " enable tab completion menu when using colon command mode (:)
 set wildmenu
@@ -109,26 +135,14 @@ if has('mouse_sgr')
     set ttymouse=sgr
 endif
 
-" syntax highlighting with true colors in the terminal
-syntax enable
-" TURNED OFF syntax highlighting becuase tmux doesn't support true colour
-" if has('termguicolors')
-"     if &term =~? 'screen\|tmux'
-"         set t_8f=^[[38;2;%lu;%lu;%lum
-"         set t_8b=^[[48;2;%lu;%lu;%lum
-"     endif
-"     set termguicolors
-" endif
-
 " bracketed paste while in insert mode, bracketed paste preserves indentation
 inoremap <silent><C-v> <Esc>:set paste<CR>a<C-r>+<Esc>:set nopaste<CR>a
 
 " better defaults
 nnoremap 0 ^
 nnoremap Y y$
-nnoremap n nzzzv
-nnoremap N Nzzzv
-nnoremap <Tab> ==j
+" nnoremap n nzzzv
+" nnoremap N Nzzzv
 
 " better motions with wrapped text while preserving numbered jumps
 for g:key in ['k', 'j', '<Up>', '<Down>']

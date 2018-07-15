@@ -101,6 +101,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 [[ $- != *i* ]] && return
 
 export PATH=$HOME/bin:$PATH
+[ -n "$TMUX" ] && export TERM=screen-256color
 
 . ~/bin/z.sh
 
