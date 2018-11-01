@@ -100,10 +100,14 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # If not running interactively return
 [[ $- != *i* ]] && return
 
-export PATH=$HOME/bin:$PATH
+export EDITOR=vim
+export RUBY=$HOME/.gem/ruby/2.5.0/bin
+export PATH=$HOME/bin:$PATH:$RUBY
+export PATH=$PATH:/usr/bin
 [ -n "$TMUX" ] && export TERM=screen-256color
 
 . ~/bin/z.sh
+source /home/pramodya/.gem/ruby/2.5.0/gems/tmuxinator-0.12.0/completion/tmuxinator.zsh
 
 setopt AUTO_CD BANG_HIST EXTENDED_HISTORY HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_ALL_DUPS HIST_FIND_NO_DUPS HIST_IGNORE_DUPS
@@ -115,28 +119,12 @@ alias l='ls'
 alias la='ls -A'
 alias ll='ls -lA'
 alias ls='ls --color=auto'
+alias lgrep='la | grep'
 alias upd='sudo pacman -Syyu'
 alias pac='sudo pacman --color auto'
 alias merge='xrdb -merge ~/.Xresources'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias mirrors='sudo reflector --score 100 --fastest 25 --sort rate --save /etc/pacman.d/mirrorlist --verbose'
 
-# MINE
-alias ag='ag --path-to-ignore ~/.ignore'
-alias vpn='~/bin/vpn.sh'
-alias vpnstop='~/bin/vpnstop.sh'
-alias vssh='ssh vagrant@localhost -p 2222'
-alias vup='cd /home/pramodya/gits/app-server && vagrant up'
-alias vhalt='cd /home/pramodya/gits/app-server && vagrant halt'
-alias suspend='systemctl suspend'
-alias seespots='/var/code/dev-scripts/connect --list --e=conv --r=all --o'
-alias t='tmux new-session -A -s $1'
-
-neofetch
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/pramodya/Downloads/nodejs-serverless/pkg/nodejs-serverless/usr/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/pramodya/Downloads/nodejs-serverless/pkg/nodejs-serverless/usr/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/pramodya/Downloads/nodejs-serverless/pkg/nodejs-serverless/usr/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/pramodya/Downloads/nodejs-serverless/pkg/nodejs-serverless/usr/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# Put all your custom aliases here
+source $HOME/.aliases
