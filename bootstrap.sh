@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-git pull origin master;
+# For testing
+if [ "$1" == "--nopull" -o "$1" == "-n" ]; then
+    git pull origin master;
+fi
 
 # Declare an associative array
 declare -A files
