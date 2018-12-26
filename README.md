@@ -2,10 +2,10 @@
 
 ## Quick start
 Running bootstrap.sh should link most of the files. Currently it does:
-    - .vimrc
-    - .zshrc
-    - i3 config
-    - nvim config
+1. .vimrc
+2. .zshrc
+3. i3 config
+4. nvim config
 
 ## Usage
 Need to link the file to the correct place on the disk i.e. `ln -s ~/dotfiles/.vimrc ~/`.
