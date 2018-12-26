@@ -15,6 +15,7 @@ files=( \
     [".tmux.conf"]="$HOME" \
     ["i3/config"]="$HOME/.config/i3" \
     ["nvim/init.vim"]="$HOME/.config/nvim" \
+    [".doom.d"]="$HOME" \
 )
 
 function linktocustom () {
