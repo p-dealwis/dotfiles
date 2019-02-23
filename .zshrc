@@ -105,6 +105,8 @@ export PATH=$HOME/bin:$PATH:$RUBY
 export PATH=$PATH:/usr/bin
 export PATH=$PATH:$HOME/.emacs.d/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin:$PATH
+export NODE_ENV=development
+export LOG_PATH=/home/pramodya/skybridge-logs
 
 [ -n "$TMUX" ] && export TERM=screen-256color
 

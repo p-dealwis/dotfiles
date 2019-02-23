@@ -89,7 +89,7 @@ bindsym $Mod+Shift+q kill
 bindsym $Mod1+q kill
 
 # launchers
-bindsym Control+space exec --no-startup-id rofr.sh -r
+# bindsym Control+space exec --no-startup-id rofr.sh -r
 
 # this is needed for super key to launch rofi
 bindsym Mod1+F1 exec --no-startup-id rofr.sh -r
