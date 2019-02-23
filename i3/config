@@ -190,7 +190,7 @@ bindsym $Mod+Down  focus down
 bindsym $Mod+Up    focus up
 bindsym $Mod+Right focus right
 
-bindsym $Mod+p focus parent
+bindsym $Mod+o focus parent
 bindsym $Mod+c focus child
 
 # move focused window
