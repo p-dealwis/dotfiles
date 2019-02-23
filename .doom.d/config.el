@@ -3,7 +3,7 @@
 ;; Place your private configuration here
 
 ;; Treemacs
-(global-set-key (kbd "s-SPC") 'treemacs)
+(global-set-key (kbd "A-SPC") 'treemacs)
 
 (defun my-setup-indent (n)
   ;; java/c/c++
@@ -53,11 +53,10 @@
   )
 
 ;; prog-mode-hook requires emacs24+
-(add-hook 'prog-mode-hook 'default-environment)
+;; (add-hook 'prog-mode-hook 'default-environment)
 ;; a few major-modes does NOT inherited from prog-mode
-(add-hook 'lua-mode-hook 'default-environment)
-(add-hook 'web-mode-hook 'default-environment)
-
+;; (add-hook 'lua-mode-hook 'default-environment)
+;; (add-hook 'web-mode-hook 'default-environment)
 
 
 ( use-package evil-window
@@ -69,3 +68,38 @@
    ("C-l" . evil-window-right)
   )
 )
+
+(nvm-use (caar (last (nvm--installed-versions))))
+
+(add-hook 'projectile-after-switch-project-hook 'mjs/setup-local-eslint)
+
+(defun mjs/setup-local-eslint ()
+    "If ESLint found in node_modules directory - use that for flycheck.
+Intended for use in PROJECTILE-AFTER-SWITCH-PROJECT-HOOK."
+    (interactive)
+    (let ((local-eslint (expand-file-name "./node_modules/.bin/eslint")))
+      (setq flycheck-javascript-eslint-executable
+            (and (file-exists-p local-eslint) local-eslint))))
+
+(rg-enable-default-bindings "\M-p")
+
+
+;; Tern stuff in case I need it again
+
+;; (setenv "PATH" (concat (getenv "PATH") ":/Users/pramodya/.nvm/versions/node/v11.5.0/bin"))
+    ;; (setq exec-path (append exec-path '("/Users/pramodya/.nvm/versions/node/v11.5.0/bin")))
+;; (add-to-list 'load-path "/Users/pramodya/.nvm/versions/node/v11.5.0/bin")
+
+;;(add-to-list 'company-backends 'company-tern)
+;;(add-hook 'js2-mode-hook (lambda ()
+                           ;;(tern-mode)
+                           ;;(company-mode)))
+
+;; Disable completion keybindings, as we use xref-js2 instead
+;; (define-key tern-mode-keymap (kbd "M-.") nil)
+;; (define-key tern-mode-keymap (kbd "M-,") nil)
+
+;; (setq company-idle-delay 0.2
+      ;; company-minimum-prefix-length 3)
+
+;; (define-key js2-mode-map (kbd "M-]") nil)
